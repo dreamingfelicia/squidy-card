@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit-html';
+    import '../some-card.js';
+
+    const title = '';
+    render(
+      html`
+        <some-card><span slot="stack">Squidward is a light turquoise octopus with purple suction cups at the end of his tentacles. He has six limbs in total. Whenever he walks, his suction cups stick to the floor,
+             meaning that he walks with a distinct squelching noise. <br><br>
+             <img src="https://nickelodeonuniverse.com/wp-content/uploads/Squidward.png">
+             </span><span slot="attributes"><h1>Squidward</h1> Squidward is a light turquoise octopus with purple suction cups at the end of his tentacles. He has six limbs in total. Whenever he walks, his suction cups stick to the floor,
+             meaning that he walks with a distinct squelching noise.</span>
+        </some-card>
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>
